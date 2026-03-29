@@ -72,11 +72,45 @@ function App() {
 
     const NavItem = ({ view, icon, label, isActive, onClick }) => (
         <button 
-            className={`nav-item ${isActive ? 'active' : ''}`}
+            className={`nav-item smooth-scale ${isActive ? 'active' : ''}`}
             onClick={onClick}
-        >
-            <span className="nav-icon">{icon}</span>
+            style={{
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'all 0.3s var(--spring-smooth)'
+            }}
+            onMouseEnter={(e) => {
+                if (!isActive) {
+                    e.target.style.transform = 'translateY(-2px)';
+                    e.target.style.background = 'rgba(76, 175, 80, 0.1)';
+                }
+            }}
+            onMouseLeave={(e) => {
+                if (!isActive) {
+                    e.target.style.transform = 'translateY(0)';
+                    e.target.style.background = 'transparent';
+                }
+            }}>
+            <span className="nav-icon" style={{
+                transition: 'all 0.3s var(--spring-bounce)',
+                transform: isActive ? 'scale(1.1)' : 'scale(1)'
+            }}>
+                {icon}
+            </span>
             {label}
+            
+            {/* Active indicator */}
+            {isActive && (
+                <div style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: '2px',
+                    background: 'linear-gradient(90deg, #4CAF50, #45a049)',
+                    animation: 'slideInFromLeft 0.3s var(--spring-smooth)'
+                }}></div>
+            )}
         </button>
     );
 
