@@ -9,7 +9,7 @@ function WorldManager() {
             version: '1.20.4',
             gameMode: 'survival',
             difficulty: 'normal',
-            screenshot: '🏞️',
+            screenshot: '[LAND]',
             playtime: '48 שעות',
             seed: '1234567890'
         },
@@ -21,7 +21,7 @@ function WorldManager() {
             version: '1.20.4',
             gameMode: 'creative',
             difficulty: 'peaceful',
-            screenshot: '🏰',
+            screenshot: '[BUILD]',
             playtime: '23 שעות',
             seed: '9876543210'
         },
@@ -33,7 +33,7 @@ function WorldManager() {
             version: '1.19.4',
             gameMode: 'survival',
             difficulty: 'hard',
-            screenshot: '🐲',
+            screenshot: '[DRAG]',
             playtime: '87 שעות',
             seed: 'DRAGONS123'
         }
@@ -62,12 +62,12 @@ function WorldManager() {
 
     const getGameModeIcon = (mode) => {
         const icons = {
-            'survival': '⚔️',
-            'creative': '🎨',
-            'adventure': '🗺️',
-            'spectator': '👻'
+            'survival': '[SWORD]',
+            'creative': '[PAINT]',
+            'adventure': '[MAP]',
+            'spectator': '[GHOST]'
         };
-        return icons[mode] || '🎮';
+        return icons[mode] || '[GAME]';
     };
 
     const getDifficultyColor = (difficulty) => {
@@ -151,7 +151,7 @@ function WorldManager() {
                                 💾 גבה
                             </button>
                             <button className="btn btn-secondary" style={{ fontSize: '14px' }}>
-                                ⚙️ הגדרות
+                                [GEAR] הגדרות
                             </button>
                             <button className="btn btn-danger" style={{ fontSize: '14px' }}>
                                 🗑️ מחק
@@ -204,7 +204,7 @@ function WorldManager() {
                 <div className="d-flex align-center justify-between">
                     <div>
                         <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>
-                            🌍 מנהל עולמות
+                            [WORLD] מנהל עולמות
                         </h1>
                         <p style={{ color: '#999' }}>
                             נהל את עולמות המיינקראפט שלך - שחק, גבה ושחזר
@@ -232,7 +232,7 @@ function WorldManager() {
                 marginBottom: '30px' 
             }}>
                 <div className="card" style={{ borderTop: '4px solid #4CAF50', textAlign: 'center' }}>
-                    <div style={{ fontSize: '32px', marginBottom: '10px' }}>🌍</div>
+                    <div style={{ fontSize: '32px', marginBottom: '10px' }}>[WORLD]</div>
                     <h3 style={{ fontSize: '24px', marginBottom: '5px' }}>{worlds.length}</h3>
                     <p style={{ color: '#999', fontSize: '14px' }}>עולמות סה"כ</p>
                 </div>
@@ -257,7 +257,7 @@ function WorldManager() {
             <div className="card mb-20">
                 <div className="card-header">
                     <h3 className="card-title">
-                        <span className="card-title-icon">🌍</span>
+                        <span className="card-title-icon">[WORLD]</span>
                         העולמות שלי
                     </h3>
                 </div>
@@ -276,7 +276,7 @@ function WorldManager() {
                         גיבויים אחרונים
                     </h3>
                     <button className="btn btn-secondary">
-                        📊 כל הגיבויים
+                        [STATS] כל הגיבויים
                     </button>
                 </div>
                 <div>

@@ -11,10 +11,10 @@ function Dashboard() {
     });
 
     const [recentActivity, setRecentActivity] = useState([
-        { type: 'mod_installed', name: 'JEI (Just Enough Items)', time: 'לפני 5 דקות', icon: '📦' },
-        { type: 'world_created', name: 'עולם הישרדות חדש', time: 'לפני שעה', icon: '🌍' },
-        { type: 'mod_updated', name: 'OptiFine', time: 'לפני 3 שעות', icon: '🔄' },
-        { type: 'world_backup', name: 'גיבוי העולם הראשי', time: 'היום', icon: '💾' }
+        { type: 'mod_installed', name: 'JEI (Just Enough Items)', time: 'לפני 5 דקות', icon: '[MOD]' },
+        { type: 'world_created', name: 'עולם הישרדות חדש', time: 'לפני שעה', icon: '[WORLD]' },
+        { type: 'mod_updated', name: 'OptiFine', time: 'לפני 3 שעות', icon: '[UPDATE]' },
+        { type: 'world_backup', name: 'גיבוי העולם הראשי', time: 'היום', icon: '[BACKUP]' }
     ]);
 
     const [recommendedMods, setRecommendedMods] = useState([
@@ -24,7 +24,7 @@ function Dashboard() {
             downloads: '45M',
             rating: 4.9,
             category: 'אופטימיזציה',
-            icon: '⚡'
+            icon: '[PERF]'
         },
         {
             name: 'Biomes O\' Plenty',
@@ -32,7 +32,7 @@ function Dashboard() {
             downloads: '32M',
             rating: 4.7,
             category: 'תוכן',
-            icon: '🌲'
+            icon: '[BIOME]'
         },
         {
             name: 'Iron Chests',
@@ -40,7 +40,7 @@ function Dashboard() {
             downloads: '28M',
             rating: 4.6,
             category: 'כלים',
-            icon: '📦'
+            icon: '[CHEST]'
         },
         {
             name: 'Waystones',
@@ -48,15 +48,15 @@ function Dashboard() {
             downloads: '15M',
             rating: 4.8,
             category: 'תחבורה',
-            icon: '🗿'
+            icon: '[STONE]'
         }
     ]);
 
     const [quickActions, setQuickActions] = useState([
-        { action: 'launch_minecraft', label: 'הפעל מיינקראפט', icon: '🚀', color: '#4CAF50' },
-        { action: 'backup_worlds', label: 'גבה עולמות', icon: '💾', color: '#2196F3' },
-        { action: 'update_mods', label: 'עדכן מודים', icon: '🔄', color: '#FF9800' },
-        { action: 'cleanup_cache', label: 'נקה זיכרון', icon: '🧹', color: '#9C27B0' }
+        { action: 'launch_minecraft', label: 'הפעל מיינקראפט', icon: '[PLAY]', color: '#4CAF50' },
+        { action: 'backup_worlds', label: 'גבה עולמות', icon: '[SAVE]', color: '#2196F3' },
+        { action: 'update_mods', label: 'עדכן מודים', icon: '[UPDATE]', color: '#FF9800' },
+        { action: 'cleanup_cache', label: 'נקה זיכרון', icon: '[CLEAN]', color: '#9C27B0' }
     ]);
 
     const StatCard = ({ title, value, icon, color = '#4CAF50' }) => (
@@ -148,13 +148,13 @@ function Dashboard() {
                 <div className="d-flex align-center justify-between">
                     <div>
                         <h1 style={{ fontSize: '28px', marginBottom: '10px' }}>
-                            ברוך הבא ל-CraftTO! ⛏️
+                            ברוך הבא ל-CraftTO! [PICK]
                         </h1>
                         <p style={{ fontSize: '16px', opacity: 0.9 }}>
                             מנהל המודים המתקדם ביותר למיינקראפט
                         </p>
                     </div>
-                    <div style={{ fontSize: '64px', opacity: 0.7 }}>🎮</div>
+                    <div style={{ fontSize: '64px', opacity: 0.7 }}>[GAME]</div>
                 </div>
             </div>
 
@@ -165,10 +165,10 @@ function Dashboard() {
                 gap: '20px', 
                 marginBottom: '30px' 
             }}>
-                <StatCard title="מודים מותקנים" value={stats.totalMods} icon="📦" color="#4CAF50" />
-                <StatCard title="מודים פעילים" value={stats.activeMods} icon="⚡" color="#FF9800" />
-                <StatCard title="עולמות" value={stats.totalWorlds} icon="🌍" color="#2196F3" />
-                <StatCard title="זמן משחק" value={stats.totalPlaytime} icon="⏱️" color="#9C27B0" />
+                <StatCard title="מודים מותקנים" value={stats.totalMods} icon="[MOD]" color="#4CAF50" />
+                <StatCard title="מודים פעילים" value={stats.activeMods} icon="[ACTIVE]" color="#FF9800" />
+                <StatCard title="עולמות" value={stats.totalWorlds} icon="[WORLD]" color="#2196F3" />
+                <StatCard title="זמן משחק" value={stats.totalPlaytime} icon="[TIME]" color="#9C27B0" />
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', marginBottom: '30px' }}>
@@ -176,7 +176,7 @@ function Dashboard() {
                 <div className="card">
                     <div className="card-header">
                         <h3 className="card-title">
-                            <span className="card-title-icon">📈</span>
+                            <span className="card-title-icon">[CHART]</span>
                             פעילות אחרונה
                         </h3>
                     </div>
@@ -191,7 +191,7 @@ function Dashboard() {
                 <div className="card">
                     <div className="card-header">
                         <h3 className="card-title">
-                            <span className="card-title-icon">💻</span>
+                            <span className="card-title-icon">[COMPUTER]</span>
                             מצב המערכת
                         </h3>
                     </div>
@@ -223,10 +223,10 @@ function Dashboard() {
                         </div>
                         <div className="d-flex gap-10">
                             <button className="btn btn-primary" style={{ fontSize: '12px' }}>
-                                🔄 בדק עדכונים
+                                [REFRESH] בדק עדכונים
                             </button>
                             <button className="btn btn-secondary" style={{ fontSize: '12px' }}>
-                                📊 פרטים מלאים
+                                [STATS] פרטים מלאים
                             </button>
                         </div>
                     </div>

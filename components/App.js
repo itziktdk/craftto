@@ -17,7 +17,7 @@ function App() {
             { text: 'מעדכן בסיס נתונים...', progress: 70 },
             { text: 'מכין ממשק המשתמש...', progress: 85 },
             { text: 'כמעט מוכן...', progress: 95 },
-            { text: 'ברוכים הבאים ל-CraftTO! ⛏️', progress: 100 }
+            { text: 'ברוכים הבאים ל-CraftTO! [PICK]', progress: 100 }
         ];
 
         let currentStep = 0;
@@ -90,12 +90,12 @@ function App() {
             <header className="header">
                 <div className="header-content">
                     <a href="#" className="logo">
-                        <span className="logo-icon-small">⛏️</span>
+                        <span className="logo-icon-small">[PICK]</span>
                         <span>CraftTO</span>
                     </a>
                     
                     <div className="search-bar">
-                        <span className="search-icon">🔍</span>
+                        <span className="search-icon">[SEARCH]</span>
                         <input 
                             type="text" 
                             className="search-input" 
@@ -107,13 +107,13 @@ function App() {
                     
                     <div className="header-actions">
                         <div className="header-btn">
-                            🎮 {minecraftVersion}
+                            [GAME] {minecraftVersion}
                         </div>
                         <div className="header-btn">
-                            🔧 {modLoader}
+                            [TOOL] {modLoader}
                         </div>
                         <button className="header-btn" onClick={() => setCurrentView('settings')}>
-                            ⚙️ הגדרות
+                            [GEAR] הגדרות
                         </button>
                     </div>
                 </div>
@@ -124,28 +124,28 @@ function App() {
                 <div className="nav-content">
                     <NavItem
                         view="dashboard"
-                        icon="🏠"
+                        icon="[HOME]"
                         label="דשבורד"
                         isActive={currentView === 'dashboard'}
                         onClick={() => setCurrentView('dashboard')}
                     />
                     <NavItem
                         view="mods"
-                        icon="📦"
+                        icon="[MOD]"
                         label="מודים"
                         isActive={currentView === 'mods'}
                         onClick={() => setCurrentView('mods')}
                     />
                     <NavItem
                         view="worlds"
-                        icon="🌍"
+                        icon="[WORLD]"
                         label="עולמות"
                         isActive={currentView === 'worlds'}
                         onClick={() => setCurrentView('worlds')}
                     />
                     <NavItem
                         view="performance"
-                        icon="📊"
+                        icon="[STATS]"
                         label="ביצועים"
                         isActive={currentView === 'performance'}
                         onClick={() => setCurrentView('performance')}
@@ -190,7 +190,7 @@ class ErrorBoundary extends React.Component {
                     textAlign: 'center',
                     padding: '20px'
                 }}>
-                    <div style={{ fontSize: '80px', marginBottom: '20px' }}>💥</div>
+                    <div style={{ fontSize: '80px', marginBottom: '20px' }}>[ERROR]</div>
                     <h2>אופס! CraftTO נתקע</h2>
                     <p style={{ marginBottom: '20px', opacity: 0.8 }}>
                         משהו השתבש במנהל המודים
@@ -199,7 +199,7 @@ class ErrorBoundary extends React.Component {
                         onClick={() => window.location.reload()}
                         className="btn btn-primary"
                     >
-                        🔄 טען מחדש
+                        [RELOAD] טען מחדש
                     </button>
                 </div>
             );

@@ -1,5 +1,5 @@
 // CraftTO Core JavaScript
-console.log('⛏️ CraftTO - Minecraft Mod Manager Loading...');
+console.log('[PICK] CraftTO - Minecraft Mod Manager Loading...');
 
 // Global CraftTO object
 window.CraftTO = {
@@ -7,14 +7,14 @@ window.CraftTO = {
     author: 'Lyrbox',
     buildDate: new Date().toISOString(),
     features: [
-        '📦 Advanced Mod Management',
-        '🌍 World Organization & Backup',
-        '⚡ Performance Optimization',
-        '🔍 Smart Mod Discovery',
-        '📊 Real-time System Monitoring',
-        '🎮 Minecraft Profile Management',
-        '💾 Automatic Backup System',
-        '🚀 One-Click Game Launch'
+        '[MOD] Advanced Mod Management',
+        '[WORLD] World Organization & Backup',
+        '[POWER] Performance Optimization',
+        '[SEARCH] Smart Mod Discovery',
+        '[STATS] Real-time System Monitoring',
+        '[GAME] Minecraft Profile Management',
+        '[SAVE] Automatic Backup System',
+        '[PLAY] One-Click Game Launch'
     ],
     minecraftVersions: [
         '1.20.4', '1.20.3', '1.20.2', '1.20.1', '1.20',
@@ -40,7 +40,7 @@ class MinecraftManager {
     }
 
     init() {
-        console.log('🎮 Initializing Minecraft Manager...');
+        console.log('[GAME] Initializing Minecraft Manager...');
         this.scanProfiles();
         this.scanMods();
         this.scanWorlds();
@@ -68,7 +68,7 @@ class MinecraftManager {
             this.profiles.set(profile.id, profile);
         });
 
-        console.log(`📁 Found ${profiles.length} Minecraft profiles`);
+        console.log(`[FOLDER] Found ${profiles.length} Minecraft profiles`);
     }
 
     scanMods() {
@@ -84,7 +84,7 @@ class MinecraftManager {
             this.installedMods.set(mod.id, mod);
         });
 
-        console.log(`📦 Found ${mods.length} installed mods`);
+        console.log(`[MOD] Found ${mods.length} installed mods`);
     }
 
     scanWorlds() {
@@ -117,11 +117,11 @@ class MinecraftManager {
             this.worlds.set(world.id, world);
         });
 
-        console.log(`🌍 Found ${worlds.length} worlds`);
+        console.log(`[WORLD] Found ${worlds.length} worlds`);
     }
 
     launchMinecraft(profileId) {
-        console.log(`🚀 Launching Minecraft with profile: ${profileId}`);
+        console.log(`[PLAY] Launching Minecraft with profile: ${profileId}`);
         // Simulate launching
         return new Promise((resolve) => {
             setTimeout(() => {
@@ -131,7 +131,7 @@ class MinecraftManager {
     }
 
     installMod(modData) {
-        console.log(`📥 Installing mod: ${modData.name}`);
+        console.log(`[DOWNLOAD] Installing mod: ${modData.name}`);
         // Simulate mod installation
         return new Promise((resolve) => {
             setTimeout(() => {
@@ -147,7 +147,7 @@ class MinecraftManager {
             return Promise.reject('World not found');
         }
 
-        console.log(`💾 Backing up world: ${world.name}`);
+        console.log(`[BACKUP] Backing up world: ${world.name}`);
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve({ 
@@ -197,7 +197,7 @@ class PerformanceMonitor {
         window.addEventListener('load', () => {
             const loadTime = performance.now();
             window.CraftTO.performance.loadTime = Math.round(loadTime);
-            console.log(`⚡ CraftTO loaded in ${Math.round(loadTime)}ms`);
+            console.log(`[POWER] CraftTO loaded in ${Math.round(loadTime)}ms`);
         });
     }
 
@@ -228,7 +228,7 @@ class ModAPIManager {
         }
 
         // Simulate API call
-        console.log(`🔍 Searching for mods: "${query}"`);
+        console.log(`[SEARCH] Searching for mods: "${query}"`);
         
         const mockResults = [
             {
@@ -251,7 +251,7 @@ class ModAPIManager {
                 rating: 4.8,
                 author: 'mezz',
                 categories: ['utility'],
-                icon: '🔍',
+                icon: '[SEARCH]',
                 versions: ['1.20.4', '1.20.3', '1.19.4'],
                 loaders: ['Fabric', 'Forge']
             }
@@ -262,7 +262,7 @@ class ModAPIManager {
     }
 
     async getModDetails(modId) {
-        console.log(`📦 Fetching details for mod: ${modId}`);
+        console.log(`[MOD] Fetching details for mod: ${modId}`);
         
         // Simulate API call
         return new Promise((resolve) => {
@@ -283,7 +283,7 @@ class ModAPIManager {
     }
 
     async downloadMod(modId, version) {
-        console.log(`📥 Downloading mod: ${modId} v${version}`);
+        console.log(`[DOWNLOAD] Downloading mod: ${modId} v${version}`);
         
         return new Promise((resolve) => {
             let progress = 0;
@@ -432,17 +432,17 @@ class KeyboardManager {
         }
     }
 
-    openSettings() { console.log('⚙️ Opening settings...'); }
-    openMods() { console.log('📦 Opening mods browser...'); }
-    openWorlds() { console.log('🌍 Opening worlds manager...'); }
-    openPerformance() { console.log('📊 Opening performance monitor...'); }
-    goHome() { console.log('🏠 Going to dashboard...'); }
+    openSettings() { console.log('[GEAR] Opening settings...'); }
+    openMods() { console.log('[MOD] Opening mods browser...'); }
+    openWorlds() { console.log('[WORLD] Opening worlds manager...'); }
+    openPerformance() { console.log('[STATS] Opening performance monitor...'); }
+    goHome() { console.log('[HOME] Going to dashboard...'); }
     refresh() { window.location.reload(); }
 }
 
 // Initialize systems when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎯 Initializing CraftTO Systems...');
+    console.log('[TARGET] Initializing CraftTO Systems...');
     
     // Initialize core systems
     window.minecraftManager = new MinecraftManager();
@@ -476,10 +476,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    console.log('✨ CraftTO Systems Initialized!');
-    console.log('⌨️ Shortcuts: Ctrl+F (fullscreen), Ctrl+S (settings), Ctrl+M (mods)');
-    console.log('🎮 Features:', window.CraftTO.features);
+    console.log('[READY] CraftTO Systems Initialized!');
+    console.log('[KEYS] Shortcuts: Ctrl+F (fullscreen), Ctrl+S (settings), Ctrl+M (mods)');
+    console.log('[GAME] Features:', window.CraftTO.features);
 });
 
-console.log('⛏️ CraftTO Core Systems Ready!');
-console.log('👨‍💻 Built by Lyrbox for the ultimate Minecraft experience!');
+console.log('[PICK] CraftTO Core Systems Ready!');
+console.log('[DEV] Built by Lyrbox for the ultimate Minecraft experience!');

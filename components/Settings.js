@@ -117,7 +117,7 @@ function Settings() {
             {/* Header */}
             <div className="card mb-20">
                 <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>
-                    ⚙️ הגדרות CraftTO
+                    [GEAR] הגדרות CraftTO
                 </h1>
                 <p style={{ color: '#999' }}>
                     התאם את CraftTO לפי הצרכים והעדפות שלך
@@ -144,7 +144,7 @@ function Settings() {
                             style={{ minWidth: '300px' }}
                         />
                         <button className="btn btn-secondary" style={{ fontSize: '14px' }}>
-                            📁 עיין
+                            [FOLDER] עיין
                         </button>
                     </div>
                 </SettingItem>
@@ -330,7 +330,7 @@ function Settings() {
                             style={{ minWidth: '300px' }}
                         />
                         <button className="btn btn-secondary" style={{ fontSize: '14px' }}>
-                            🔍 חפש
+                            [SEARCH] חפש
                         </button>
                     </div>
                 </SettingItem>
@@ -356,7 +356,7 @@ function Settings() {
                         📤 ייצא הגדרות
                     </button>
                     <button className="btn btn-danger">
-                        🔄 איפוס לברירת מחדל
+                        [RESET] איפוס לברירת מחדל
                     </button>
                 </div>
 
@@ -368,7 +368,7 @@ function Settings() {
                     border: '1px solid rgba(76, 175, 80, 0.3)'
                 }}>
                     <h4 style={{ fontSize: '14px', marginBottom: '8px', color: '#4CAF50' }}>
-                        💡 טיפ מועיל
+                        [TIP] טיפ מועיל
                     </h4>
                     <p style={{ fontSize: '14px', color: '#ccc' }}>
                         ההגדרות נשמרות אוטומטית במחשב שלך. אתה יכול לייצא אותן ולייבא במחשב אחר.

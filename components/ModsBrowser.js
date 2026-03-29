@@ -18,7 +18,7 @@ function ModsBrowser({ searchQuery, version, loader }) {
                 downloads: 45000000,
                 rating: 4.9,
                 category: 'אופטימיזציה',
-                icon: '⚡',
+                icon: '[PERF]',
                 installed: false,
                 featured: true
             },
@@ -30,7 +30,7 @@ function ModsBrowser({ searchQuery, version, loader }) {
                 downloads: 38000000,
                 rating: 4.8,
                 category: 'כלים',
-                icon: '🔍',
+                icon: '[INFO]',
                 installed: true,
                 featured: true
             },
@@ -42,7 +42,7 @@ function ModsBrowser({ searchQuery, version, loader }) {
                 downloads: 32000000,
                 rating: 4.7,
                 category: 'תוכן',
-                icon: '🌲',
+                icon: '[BIOME]',
                 installed: false,
                 featured: true
             }
@@ -160,7 +160,7 @@ function ModsBrowser({ searchQuery, version, loader }) {
             {/* Header */}
             <div className="card mb-20">
                 <h1 style={{ fontSize: '24px', marginBottom: '15px' }}>
-                    📦 דפדפן מודים
+                    [MODS] דפדפן מודים
                 </h1>
                 <p style={{ color: '#999' }}>
                     גלה והתקן מודים למיינקראפט {version} עם {loader}
@@ -223,7 +223,7 @@ function ModsBrowser({ searchQuery, version, loader }) {
 
             {filteredMods.length === 0 && (
                 <div className="card text-center" style={{ padding: '60px 20px' }}>
-                    <div style={{ fontSize: '64px', marginBottom: '20px' }}>🔍</div>
+                    <div style={{ fontSize: '64px', marginBottom: '20px' }}>[SEARCH]</div>
                     <h3>לא נמצאו מודים</h3>
                     <p style={{ color: '#999', marginTop: '10px' }}>
                         נסה לשנות את הקטגוריה או חיפוש אחר

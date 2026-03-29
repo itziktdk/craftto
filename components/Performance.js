@@ -117,7 +117,7 @@ function Performance() {
                 padding: '10px',
                 borderRadius: '50%'
             }}>
-                {tip.type === 'mod' ? '📦' : '⚙️'}
+                {tip.type === 'mod' ? '[MOD]' : '[GEAR]'}
             </div>
             
             <div style={{ flex: 1 }}>
@@ -152,7 +152,7 @@ function Performance() {
                 <div className="d-flex align-center justify-between">
                     <div>
                         <h1 style={{ fontSize: '24px', marginBottom: '10px' }}>
-                            📊 מוניטור ביצועים
+                            [STATS] מוניטור ביצועים
                         </h1>
                         <p style={{ color: '#999' }}>
                             עקוב אחר ביצועי המערכת והמשחק בזמן אמת
@@ -177,7 +177,7 @@ function Performance() {
                 <div className="d-flex align-center justify-between">
                     <div>
                         <h3 style={{ fontSize: '20px', marginBottom: '10px' }}>
-                            🎮 מצב המשחק הנוכחי
+                            [GAME] מצב המשחק הנוכחי
                         </h3>
                         <div className="d-flex align-center gap-30">
                             <div>
@@ -200,7 +200,7 @@ function Performance() {
                             </div>
                         </div>
                     </div>
-                    <div style={{ fontSize: '48px', opacity: 0.7 }}>⚡</div>
+                    <div style={{ fontSize: '48px', opacity: 0.7 }}>[POWER]</div>
                 </div>
             </div>
 
@@ -214,28 +214,28 @@ function Performance() {
                 <MetricCard
                     title="מעבד (CPU)"
                     value={Math.round(systemMetrics.cpu)}
-                    icon="🔥"
+                    icon="[CPU]"
                     color="#FF9800"
                     description="שימוש במעבד"
                 />
                 <MetricCard
                     title="זיכרון (RAM)"
                     value={Math.round(systemMetrics.memory)}
-                    icon="💾"
+                    icon="[RAM]"
                     color="#2196F3"
                     description="שימוש בזיכרון"
                 />
                 <MetricCard
                     title="דיסק קשיח"
                     value={Math.round(systemMetrics.disk)}
-                    icon="💿"
+                    icon="[DISK]"
                     color="#9C27B0"
                     description="שטח דיסק תפוס"
                 />
                 <MetricCard
                     title="כרטיס מסך (GPU)"
                     value={Math.round(systemMetrics.gpu)}
-                    icon="🎮"
+                    icon="[GPU]"
                     color="#4CAF50"
                     description="שימוש בגרפיקה"
                 />
@@ -246,12 +246,12 @@ function Performance() {
                 <div className="card">
                     <div className="card-header">
                         <h3 className="card-title">
-                            <span className="card-title-icon">📈</span>
+                            <span className="card-title-icon">[CHART]</span>
                             גרף ביצועים
                         </h3>
                     </div>
                     <div style={{ textAlign: 'center', padding: '40px 20px' }}>
-                        <div style={{ fontSize: '64px', marginBottom: '20px' }}>📊</div>
+                        <div style={{ fontSize: '64px', marginBottom: '20px' }}>[CHART]</div>
                         <p style={{ color: '#999' }}>גרף ביצועים בזמן אמת</p>
                         <p style={{ fontSize: '12px', color: '#666', marginTop: '10px' }}>
                             (יתווסף בגרסה עתידית)
@@ -263,7 +263,7 @@ function Performance() {
                 <div className="card">
                     <div className="card-header">
                         <h3 className="card-title">
-                            <span className="card-title-icon">💻</span>
+                            <span className="card-title-icon">[COMPUTER]</span>
                             פרטי חומרה
                         </h3>
                     </div>
@@ -292,11 +292,11 @@ function Performance() {
             <div className="card">
                 <div className="card-header">
                     <h3 className="card-title">
-                        <span className="card-title-icon">💡</span>
+                        <span className="card-title-icon">[TIP]</span>
                         המלצות אופטימיזציה
                     </h3>
                     <button className="btn btn-secondary">
-                        🔄 רענן המלצות
+                        [REFRESH] רענן המלצות
                     </button>
                 </div>
                 <div>
